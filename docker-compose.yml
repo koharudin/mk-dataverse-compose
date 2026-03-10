@@ -113,6 +113,9 @@ services:
         - "RSERVE_USER=rserve"
         - "RSERVE_PASSWORD=rserve"
         - "JVM_OPTS='-Xmx1g -Xms1g -XX:MaxPermSize=2g -XX:PermSize=2g'"
+        - TRUSTED_REMOTE_STORAGE_ENABLED=true
+        - TRUSTED_REMOTE_STORAGE_URL=https://sftpgo.mediakolaborasi.com/api/trs
+        - TRUSTED_REMOTE_STORAGE_TOKEN=secret_token
       depends_on:
         - postgres
         - solr
